@@ -1,0 +1,565 @@
+.home
+  &-information
+    background-image url('../img/bg-1.jpg')
+    background-position center center
+    background-size cover
+    background-attachment fixed
+    height 100vh
+    display flex
+    align-items center
+    position relative
+
+    @media $sm
+      justify-content center
+      align-items center
+      padding 0 20px
+    @media $xs
+      align-items flex-start
+      padding-top 90px
+
+    &-content
+      margin 0 0 0 16.51%
+      @media $sm
+        margin 0
+      h1
+        color white
+        font-size remify(31)
+        line-height 2.29
+        letter-spacing 4.6px
+        font-weight $normal
+        margin-top -15px 0 0 0
+        text-transform uppercase
+        @media $sm
+          text-align center
+        @media $xs
+          font-size remify(16)
+          line-height 2.25
+          letter-spacing 2.4px
+          br
+            display none
+        span
+          font-weight $medium
+          font-style italic
+          @media $xs
+            letter-spacing 2.2px
+
+      h2
+        color #5e78b3
+        font-size remify(17)
+        font-weight $medium
+        line-height 4.24
+        letter-spacing 8px
+        text-align left
+        text-transform uppercase
+
+        @media $xs
+          font-size remify(12)
+          line-height 2.08
+          letter-spacing 5.6px
+
+    p
+      position absolute
+      display flex
+      bottom 4%
+      left 0
+      right 0
+      justify-content center
+      align-items center
+      @media $sm
+        flex-direction column
+        text-align center
+        img
+          order 2
+      span
+        margin-left 36px
+        font-family "Futura"
+        font-weight $medium
+        line-height 5.54
+        letter-spacing 5px
+        color white
+        @media $sm
+          margin 0
+          order 1
+        @media $xs
+          font-size remify(11)
+          line-height 6.55
+          letter-spacing 4.2px
+      img
+        @media $xs
+          height 24px
+          width 24px
+
+  &-ph
+    font-family "Futura"
+    font-weight $medium
+    font-style normal
+    position relative
+    top 0
+    bottom 0
+    &-image
+      position absolute
+      top 50%
+      transform: translateY(-50%);
+      right 139px
+      @media $xs
+        display none
+    &-content
+      background-image url('../img/bg-2.jpg')
+      background-position center center
+      background-size cover
+      border 1px solid black
+      width 68%
+      min-height 595px
+      display flex
+      justify-content center
+      align-items flex-start
+      flex-direction column
+      padding 0 0 0 127px
+      @media $xs
+        width 100%
+        padding 0 0 0 4%
+    &-number
+      font-size remify(16)
+      line-height 4.5
+      letter-spacing 7.5px
+      color #5e78b3
+    &-title
+      font-size remify(30)
+      line-height 1.13
+      letter-spacing 3.6px
+      color white
+      margin 0
+      font-weight $normal
+    &-information
+      font-size remify(15)
+      font-weight normal
+      line-height 2.4
+      letter-spacing 0.4px
+      color #ffffff
+      width 55%
+      margin 10px 0 43px 0
+    &-button
+      border solid 1px #ffffff
+      color white
+      text-decoration none
+      background-color transparent
+      font-size remify(12)
+      letter-spacing 2px
+      text-align center
+      padding 10px 57px
+  &-investment
+    display flex
+    &-content
+      padding 0 0 0 175px
+      display flex
+      flex-direction column
+      justify-content center
+      align-items flex-start
+    &-number
+      font-size remify(16)
+      line-height 4.5
+      letter-spacing 7.5px
+      color #5e78b3
+    &-title
+      font-size remify(30)
+      line-height 1.63
+      letter-spacing 3.6px
+      color #0c0d11
+      margin 0
+      font-weight $normal
+    &-information
+      font-size remify(15)
+      font-weight normal
+      line-height 2.13
+      letter-spacing 0.2px
+      color #0c0d11
+      width 75%
+      margin 10px 0 43px 0
+    &-button
+      color white
+      text-decoration none
+      background-color #0c0d11
+      font-size remify(12)
+      letter-spacing 2px
+      text-align center
+      padding 10px 57px
+  &-strategy
+    display flex
+    flex-direction row
+    &-header
+      flex-direction column
+      justify-content center
+      align-items flex-start
+      flex-basis 25%
+      margin 51px 0 0 72px
+    &-number
+      font-size remify(16)
+      line-height 4.5
+      letter-spacing 7.5px
+      color #5e78b3
+    &-title
+      font-size remify(30)
+      line-height 1.43
+      letter-spacing 3.6px
+      color #0c0d11
+      margin 0
+      font-weight $normal
+    &-information
+      flex-basis 38%
+      margin-left 75px
+      font-weight normal
+      font-style normal
+      line-height 2.13
+      letter-spacing 0.2px
+      color #333333
+      margin-top 73px
+    &-image
+      flex-basis auto
+      margin-top 51px
+  &-smart
+    display flex
+    position relative
+    &-left
+      background-image url('../img/smart-1@2x.jpg')
+      background-position center center
+      background-size cover
+      min-height 451px
+      flex-basis 53%
+      &-content
+        position relative
+        z-index 2
+        margin 84px 0 0 212px
+      &-number
+        font-size remify(16)
+        line-height 4.5
+        letter-spacing 7.5px
+        color #5e78b3
+      &-title
+        font-size remify(30)
+        line-height 1.63
+        letter-spacing 3.6px
+        color white
+        margin 0
+        font-weight $normal
+    &-right
+      flex-basis 47%
+      display flex
+      align-items center
+      padding 0 100px
+      p
+        margin 0
+        font-weight $normal
+        line-height 1.89
+        letter-spacing 0.2px
+        color #333333
+    &-line
+      height 1px
+      width 368px
+      position absolute
+      background-color #5e78b3
+      top 95px
+      right 29%
+
+  &-team
+    padding-bottom 69px
+    padding-top 45px
+    position relative
+    img
+      position absolute
+      right 0
+      top -10%
+    &-content
+      display flex
+      flex-direction column
+      justify-content center
+      align-items flex-start
+      width 38.75%
+      margin-left 8.89%
+    &-number
+      font-size remify(16)
+      line-height 4.5
+      letter-spacing 7.5px
+      color #5e78b3
+    &-title
+      font-size remify(30)
+      line-height 1.63
+      letter-spacing 3.6px
+      color #0c0d11
+      margin 0
+      font-weight $normal
+    &-information
+      font-size remify(15)
+      font-weight normal
+      line-height 2.13
+      letter-spacing 0.2px
+      color #0c0d11
+      margin 10px 0 43px 0
+    &-button
+      color white
+      text-decoration none
+      background-color #0c0d11
+      font-size remify(12)
+      letter-spacing 2px
+      text-align center
+      padding 10px 57px
+  &-partner
+    display flex
+    &-left
+      background-image url('../img/partner-1@2x.jpg')
+      background-position center center
+      background-size cover
+      min-height 451px
+      flex-basis 55%
+      display flex
+      align-items flex-start
+      justify-content flex-end
+      &-content
+        position relative
+        z-index 2
+        width 40%
+        margin 75px 0 0 0
+      &-number
+        font-size remify(16)
+        line-height 4.5
+        letter-spacing 7.5px
+        color #5e78b3
+      &-title
+        font-size remify(30)
+        line-height 1.63
+        letter-spacing 3.6px
+        color white
+        margin 0
+        font-weight $normal
+        padding-bottom 20px
+        border-bottom 1px solid #5e78b3
+    &-right
+      flex-basis 45%
+      display flex
+      padding 0 110px
+      flex-direction column
+      align-items flex-start
+      justify-content center
+      p
+        margin 34px 0 0 0
+        font-weight $normal
+        line-height 2.13
+        letter-spacing 0.2px
+        color #333333
+  &-vre
+    display flex
+    position relative
+    padding 0 0 121px 0
+    &-image
+      position absolute
+      top 47px
+      right 0
+    &-left
+      flex-basis 72%
+      display flex
+      padding 64px 159px 0 62px
+    &-right
+      flex-basis 28%
+      background-color #212c3e
+    &-content
+      margin 0 0 0 48px
+      h3
+        font-size remify(30)
+        font-weight $normal
+        line-height 1.43
+        letter-spacing 3.6px
+        color #0c0d11
+        margin -8px 0 0 0
+    &-list
+      list-style none
+      padding 0
+      margin 48px 0 0 0
+      &-item
+        display flex
+        align-items center
+        margin-bottom 15px
+        &-number
+          font-size remify(16)
+          line-height 4.5
+          letter-spacing 7.5px
+          color #5e78b3
+        &-text
+          font-family "Futura"
+          font-weight $normal
+          line-height: 1.69;
+          letter-spacing 0.2px
+          color #333333
+          margin-left 48px
+          span
+            font-weight $bold
+  &-presence
+    background-image url('../img/presence-1@2x.jpg')
+    background-position center center
+    background-size cover
+    min-height 323px
+    display flex
+    align-items center
+    justify-content center
+    &-content
+      flex-basis 29%
+    &-number
+      font-size remify(16)
+      line-height 4.5
+      letter-spacing 7.5px
+      color #5e78b3
+      margin 0
+    &-title
+      font-size remify(30)
+      line-height 1.63
+      letter-spacing 3.6px
+      color white
+      font-weight $normal
+      margin 0
+    &-text
+      font-size remify(15)
+      font-weight normal;
+      line-height 2.4
+      letter-spacing 0.4px
+      color #ffffff
+  &-track
+    padding 0 6% 82px 6%
+    &-number
+      font-size remify(16)
+      line-height 4.5
+      letter-spacing 7.5px
+      color #5e78b3
+      margin 0
+    &-title
+      font-weight $medium
+      font-size remify(30)
+      line-height 1.43
+      letter-spacing 3.6px
+      color black
+      margin 0
+    &-container
+      display flex
+      margin 27px auto 0 auto
+      align-items center
+    &-image
+      margin 0
+      padding 0
+      position relative
+      &:nth-child(1)
+        width 32.5%
+      &:nth-child(2)
+        width 35%
+      &:nth-child(3)
+        width 32.5%
+      &:hover
+        figcaption
+          display none
+        .home-track-image-hover
+          display flex
+      img
+        width 100%
+        height auto
+      figcaption
+        position absolute
+        bottom 0
+        left 0
+        right 0
+        font-size 15px
+        font-weight 500
+        font-style normal
+        font-stretch normal
+        letter-spacing 1.8px
+        text-align center
+        color #ffffff
+        opacity 0.89
+        background-color #212c3e
+        height 65px
+        line-height 65px
+
+      &-hover
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+        display none
+        opacity 0.93
+        background-color #212c3e
+        align-items center
+        justify-content center
+        flex-direction column
+        span
+          font-size remify(17)
+          font-weight $medium
+          line-height 1.41
+          letter-spacing 2px
+          text-align center
+          color #5e78b3
+
+        a
+          width 30%
+          height 30px
+          border solid 1px #ffffff
+          font-size remify(11)
+          font-weight $medium
+          letter-spacing 1.8px
+          line-height 30px
+          text-align center
+          color white
+          margin 40px 0 0 0
+          cursor pointer
+  &-contact
+    display flex
+    padding 82px 0 0 0
+    align-items flex-end
+    &-content
+      padding 0 152px 0 158px
+      width 100%
+    &-number
+      font-weight $medium
+      font-size remify(16)
+      line-height 4.5
+      letter-spacing 7.5px
+      color #5e78b3
+      margin 0
+    &-title
+      font-weight $medium
+      font-size remify(30)
+      line-height 1.43
+      letter-spacing 3.6px
+      color #0c0d11
+      margin 0 0 38px 0
+    &-form
+      margin 0 0 66px 0
+      overflow hidden
+      label
+        height 36px
+        font-size remify(15)
+        font-weight normal
+        line-height 2.27
+        letter-spacing 0.1px
+        color #0c0d11
+        display block
+        margin 0 0 9px 0
+      input
+        border 1px solid #979797
+        outline none
+        padding 5px
+        width 100%
+      textarea
+        border 1px solid #979797
+        outline none
+        resize none
+        width 100%
+        padding 5px
+      button
+        width 138px
+        height 36px
+        background-color #0c0d11
+        font-size 12px
+        font-weight $medium
+        line-height 36px
+        letter-spacing 2px
+        text-align center
+        color #ffffff
+        margin 42px 0 0 0
+        float right
+
