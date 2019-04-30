@@ -8,15 +8,13 @@
     display flex
     align-items center
     position relative
-
     @media $sm
       justify-content center
       align-items center
-      padding 0 20px
+      padding 0 60px
     @media $xs
       align-items flex-start
-      padding-top 90px
-
+      padding 90px 20px 0 20px
     &-content
       margin 0 0 0 16.51%
       @media $sl
@@ -41,6 +39,12 @@
           letter-spacing 2.4px
           br
             display none
+        @media $xs
+          font-size remify(14)
+          line-height 2
+          letter-spacing 2.4px
+          text-align center
+          color #ffffff
         span
           font-weight $medium
           font-style italic
@@ -61,6 +65,8 @@
           font-size remify(17)
           line-height 2.08
           letter-spacing 5.6px
+        @media $xs
+          font-size 12px
 
     p
       position absolute
@@ -86,8 +92,8 @@
           margin 0
           order 1
         @media $xs
+          line-height 4
           font-size remify(11)
-          line-height 6.55
           letter-spacing 4.2px
       img
         @media $xs
@@ -97,9 +103,14 @@
   &-investment
     display flex
     align-items flex-start
+    @media $sm
+      flex-direction column
+      padding-bottom 59px
     img
       width 38%
       height auto
+      @media $sm
+        width 100%
     &-content
       padding 82px 0 0 175px
       display flex
@@ -110,24 +121,41 @@
         padding 60px 0 0 100px
       @media $sl
         padding 30px 0 0 60px
+      @media $xs
+        padding 0 13px 0 13px
     &-information
       width 75%
       margin 10px 0 43px 0
       @media $sl
         margin 10px 0 25px 0
+      @media $xs
+        width 100%
   &-strategy
     display flex
-    flex-direction row
     align-items center
     padding-bottom 50px
+    @media $sm
+      flex-direction column
+      background-color #f6f6f6
+      padding 0 60px
+      align-items flex-start
+    @media $xs
+      padding 0 13px
+
     &-header
       flex-direction column
       justify-content center
       align-items flex-start
       flex-basis 25%
-      margin 51px 0 0 72px
+      padding 51px 0 0 72px
       @media $lg
-        margin 41px 0 0 59px
+        padding 41px 0 0 59px
+      @media $sm
+        width 100%
+        padding 20px 0 0 0
+        h3
+          br:nth-child(1)
+            display none
     &-information
       flex-basis 38%
       margin 73px 0 0 75px
@@ -135,18 +163,22 @@
         margin 59px 0 0 60px
       @media $sl
         margin 59px 20px 0 10px
+      @media $sm
+        margin 20px 0 0 0
     &-image
       flex-basis 23%
       margin 51px 0 0 0
+      padding 0
       @media $sl
         margin 51px 0 0 0
-      img
-        width 100%
-        height auto
-
+      @media $sm
+        width 75%
+        margin 10px 0 0 0
   &-smart
     display flex
     position relative
+    @media $sm
+      flex-direction column
     &-left
       background-image url('../img/smart-1@2x.jpg')
       background-position center center
@@ -155,10 +187,20 @@
       flex-basis 53%
       @media $sl
         height 380px
+      @media $sm
+        height 234px
+      @media $xs
+        height 134px
       &-content
         position relative
         z-index 2
         margin 84px 0 0 212px
+        @media $sm
+          margin 50px 0 0 100px
+        @media $sm
+          margin 50px 0 0 60px
+        @media $xs
+          margin 0 0 0 30px
       &-title
         color white
     &-right
@@ -166,8 +208,14 @@
       display flex
       align-items center
       padding 0 100px
+      p
+        margin 0
       @media $sl
         padding 0 50px
+      @media $sl
+        padding 60px
+      @media $xs
+        padding 15px 30px 14px 13px
     &-line
       height 1px
       width 368px
@@ -177,6 +225,8 @@
       right 29%
       @media $sl
         top 50px
+      @media $sm
+        display none
 
   &-team
     padding-bottom 69px
@@ -318,7 +368,7 @@
         &-text
           font-family "Futura"
           font-weight $normal
-          line-height: 1.69;
+          line-height 1.69
           letter-spacing 0.2px
           color #333333
           margin-left 48px
