@@ -109,6 +109,7 @@
     img
       width 38%
       height auto
+      max-width 575px
       @media $sm
         width 100%
     &-content
@@ -166,7 +167,8 @@
       @media $sm
         margin 20px 0 0 0
     &-image
-      flex-basis 23%
+      width 23%
+      max-width 334px
       margin 51px 0 0 0
       padding 0
       @media $sl
@@ -215,7 +217,7 @@
       @media $sm
         padding 40px 60px
       @media $xs
-        padding 15px 30px 14px 13px
+        padding 30px 30px 14px 13px
     &-line
       height 1px
       width 368px
@@ -227,6 +229,19 @@
         top 50px
       @media $sm
         display none
+      &-mobile
+        display none
+        @media $sm
+          display block
+          position absolute
+          height 44%
+          width 1px
+          background-color #5e78b3
+          top 15%
+          right 24%
+        @media $xs
+          top 10%
+          height 42%
 
   &-team
     padding-bottom 69px
@@ -240,6 +255,7 @@
       right 0
       top -10%
       width 33%
+      max-width 474px
       @media $lg
         width 30%
         top -15%
@@ -313,10 +329,12 @@
       display flex
       align-items flex-start
       justify-content flex-end
+      position relative
       @media $sm
         justify-content flex-start
         min-height inherit
         height 234px
+        width 77%
       @media $xs
         height 134px
       &-content
@@ -353,7 +371,7 @@
       @media $sm
         padding 40px 60px
       @media $xs
-        padding 15px 30px 14px 13px
+        padding 35px 30px 14px 13px
       img
         height 103px
         width auto
@@ -371,6 +389,16 @@
         a
           color #333
           text-decoration underline
+    &-line
+      display none
+      @media $sm
+        display block
+        position absolute
+        height 70%
+        width 1px
+        background-color #5e78b3
+        top 45%
+        right 7%
   &-vre
     display flex
     position relative
@@ -384,6 +412,7 @@
       top 47px
       right 0
       width 33.75%
+      max-width 486px
       @media $sm
         display none
     &-left
