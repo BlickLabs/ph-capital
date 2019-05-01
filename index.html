@@ -396,7 +396,7 @@
           <span>
             PH II
           </span>
-          <a href="#">
+          <a id="trigger-ph-2">
             SEE MORE
           </a>
         </div>
@@ -457,7 +457,7 @@
       </figure>
     </div>
   </div>
-</section id>
+</section>
 <section class="home-contact" id="contact">
   <img src="img/contact-1.png"
        srcset="img/contact-1@2x.png 2x,img/contact-1@3x.png 3x">
@@ -481,6 +481,50 @@
     </form>
   </div>
 </section>
+<div id="modal-ph-2" class="ph-modal">
+  <div class="ph-modal-content">
+    <span class="ph-modal-close" id="modal-ph-2-close">&times;</span>
+    <div class="ph-modal-title">
+      PH II
+    </div>
+    <div class="ph-modal-items owl-carousel owl-theme" id="ph-2-carousel">
+      <div class="ph-modal-item">
+        TLACOTALPAN 146
+      </div>
+      <div class="ph-modal-item">
+        NEBRASKA 159
+      </div>
+      <div class="ph-modal-item">
+        CHICAGO 61
+      </div>
+      <div class="ph-modal-item">
+        CAROLINA 149
+      </div>
+      <div class="ph-modal-item">
+        ATLANTA 186
+      </div>
+    </div>
+    <div class="ph-modal-item-container">
+      <div class="ph-modal-item-title">
+        TLACOTALPAN 146
+      </div>
+      <div class="ph-modal-item-text">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type
+        specimen book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged.
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Date:</span> November 2016. <br>
+        <span>Number of apartments:</span> 6 <br>
+        <span>Investment:</span> MX$17,767,236 <br>
+        <span>Revenue:</span> MX$20,750,000 <br>
+      </div>
+    </div>
+  </div>
+</div>
 
       </main>
       <footer class="footer">
@@ -513,6 +557,23 @@
 		responsive:{
 			0:{
 				items:1
+			}
+		}
+	});
+	let $ph2 = $('#ph-2-carousel');
+	$ph2.owlCarousel({
+		loop: true,
+		nav: false,
+    dots:false,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:5
 			}
 		}
 	});
