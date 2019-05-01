@@ -5,14 +5,14 @@ var siteNavbar = document.querySelector('.navbar');
 
 //navbar-fixed-top
 function doSomething(scroll_pos) {
-  if (window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === '/project-name/index.html' || window.location.pathname === '/project-name/') {
+  // if (window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === '/ph-capital/index.html' || window.location.pathname === '/ph-capital/') {
     if (scroll_pos > 30) {
       siteNavbar.classList.add('navbar-scroll');
 
     } else {
       siteNavbar.classList.remove('navbar-scroll');
     }
-  }
+  // }
 }
 
 doSomething();
