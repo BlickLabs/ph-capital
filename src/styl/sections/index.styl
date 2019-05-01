@@ -13,8 +13,8 @@
       align-items center
       padding 0 60px
     @media $xs
-      align-items flex-start
-      padding 90px 20px 0 20px
+      align-items center
+      padding 0 20px 0 20px
     &-content
       margin 0 0 0 16.51%
       @media $sl
@@ -172,8 +172,10 @@
       @media $sl
         margin 51px 0 0 0
       @media $sm
-        width 75%
+        width 50%
         margin 10px 0 0 0
+      @media $xs
+        width 75%
   &-smart
     display flex
     position relative
@@ -196,11 +198,9 @@
         z-index 2
         margin 84px 0 0 212px
         @media $sm
-          margin 50px 0 0 100px
-        @media $sm
-          margin 50px 0 0 60px
+          margin 50px 0 50px 60px
         @media $xs
-          margin 0 0 0 30px
+          margin 0 0 30px 30px
       &-title
         color white
     &-right
@@ -212,8 +212,8 @@
         margin 0
       @media $sl
         padding 0 50px
-      @media $sl
-        padding 60px
+      @media $sm
+        padding 40px 60px
       @media $xs
         padding 15px 30px 14px 13px
     &-line
@@ -233,7 +233,9 @@
     padding-top 45px
     position relative
     background-color #f6f6f6
-    img
+    @media $xs
+      padding-top 0
+    &-image-desktop
       position absolute
       right 0
       top -10%
@@ -244,6 +246,18 @@
       @media $sl
         width 35%
         top -2.5%
+      @media $sm
+        top 0
+        width 40%
+      @media $xs
+        display none
+    &-image-mobile
+      position absolute
+      right 0
+      top 0
+      display none
+      @media $xs
+        display block
 
     &-content
       display flex
@@ -252,6 +266,13 @@
       align-items flex-start
       width 38.75%
       margin-left 8.89%
+      a
+        padding 10px 50px
+      @media $sm
+        margin-left 60px
+      @media $xs
+        width 60%
+        margin-left 13px
     &-number
       font-size remify(16)
       line-height 4.5
@@ -281,6 +302,8 @@
       padding 10px 57px
   &-partner
     display flex
+    @media $sm
+      flex-direction column
     &-left
       background-image url('../img/partner-1@2x.jpg')
       background-position center center
@@ -290,6 +313,12 @@
       display flex
       align-items flex-start
       justify-content flex-end
+      @media $sm
+        justify-content flex-start
+        min-height inherit
+        height 234px
+      @media $xs
+        height 134px
       &-content
         position relative
         z-index 2
@@ -299,15 +328,19 @@
           width 45%
         @media $sl
           width 50%
-      &-number
-        font-size remify(16)
-        line-height 4.5
-        letter-spacing 7.5px
-        color #5e78b3
+        @media $sm
+          margin 50px 0 50px 60px
+          width 80%
+        @media $xs
+          margin 0 0 30px 30px
       &-title
         color white
         padding-bottom 20px
         border-bottom 1px solid #5e78b3
+        @media $sm
+          border-bottom none
+          br:nth-child(1)
+            display none
     &-right
       flex-basis 45%
       display flex
@@ -317,6 +350,10 @@
       justify-content center
       @media $sl
         padding 0 50px
+      @media $sm
+        padding 40px 60px
+      @media $xs
+        padding 15px 30px 14px 13px
       img
         height 103px
         width auto
@@ -324,9 +361,13 @@
           height 87px
         @media $sl
           height 70px
+        @media $sm
+          display none
       p
         margin 34px 0 0 0
         color #333333
+        @media $sm
+          margin 0
         a
           color #333
           text-decoration underline
@@ -334,37 +375,54 @@
     display flex
     position relative
     padding 0 0 121px 0
+    @media $sm
+      padding 0 0 60px 0
+    @media $sm
+      padding 0 0 0 0
     &-image
       position absolute
       top 47px
       right 0
       width 33.75%
+      @media $sm
+        display none
     &-left
       flex-basis 72%
       display flex
       padding 64px 159px 0 62px
       @media $sl
         padding 64px 100px 0 40px
+      @media $sm
+        flex-basis 100%
+        padding 20px 50px 0 60px
+      @media $xs
+        padding 15px 30px 14px 13px
     &-right
       flex-basis 28%
       background-color #212c3e
+      @media $sm
+        display none
     &-content
       margin 0 0 0 48px
+      @media $xs
+        margin 0 0 0 10px
       h3
         margin -8px 0 0 0
+        @media $sm
+          br
+            display none
+        @media $xs
+          margin 7px
     &-list
       list-style none
       padding 0
       margin 48px 0 0 0
+      @media $xs
+        margin 20px 0 0 -50px
       &-item
         display flex
         align-items center
         margin-bottom 15px
-        &-number
-          font-size remify(16)
-          line-height 4.5
-          letter-spacing 7.5px
-          color #5e78b3
         &-text
           font-family "Futura"
           font-weight $normal
@@ -374,8 +432,20 @@
           margin-left 48px
           span
             font-weight $bold
+          @media $sm
+            font-size remify(12)
+            line-height 2
+            letter-spacing 0.1px
+            color #333333
+          @media $xs
+            margin-left 20px
   &-track
     padding 0 6% 82px 6%
+    @media $sm
+      padding 40px 60px
+      background-color #f6f6f6
+    @media $xs
+      padding 15px 13px 30px 13px
     &-number
       font-size remify(16)
       line-height 4.5
@@ -393,6 +463,13 @@
       display flex
       margin 27px auto 0 auto
       align-items center
+      @media $xs
+        display none !important
+      &-mobile
+        display none !important
+        @media $xs
+          display block !important
+          margin-top 20px
     &-image
       margin 0
       padding 0
@@ -408,6 +485,8 @@
           display none
         .home-track-image-hover
           display flex
+      &-mobile
+        width 100% !important
       img
         width 100%
         height auto
@@ -416,10 +495,8 @@
         bottom 0
         left 0
         right 0
-        font-size 15px
-        font-weight 500
-        font-style normal
-        font-stretch normal
+        font-size remify(15)
+        font-weight $medium
         letter-spacing 1.8px
         text-align center
         color #ffffff
@@ -433,6 +510,10 @@
         @media $sl
           height 50px
           line-height 50px
+        @media $xs
+          font-size remify(15)
+          height 40px
+          line-height 40px
 
       &-hover
         position absolute
@@ -467,14 +548,23 @@
           margin 40px 0 0 0
           cursor pointer
   &-contact
-    img
-      width 44%
-      height auto
     display flex
     padding 82px 0 0 0
     align-items flex-end
+    position relative
     @media $sl
       padding 42px 0 0 0
+    @media $xs
+      padding 0
+    img
+      width 44%
+      height auto
+      z-index -1
+      @media $xs
+        position absolute
+        bottom 0
+        left 0
+        width 90%
     &-content
       padding 0 152px 0 158px
       width 100%
@@ -482,20 +572,12 @@
         padding 0 120px 0 126px
       @media $sl
         padding 0 70px 0 76px
-    &-number
-      font-weight $medium
-      font-size remify(16)
-      line-height 4.5
-      letter-spacing 7.5px
-      color #5e78b3
-      margin 0
-    &-title
-      font-weight $medium
-      font-size remify(30)
-      line-height 1.43
-      letter-spacing 3.6px
-      color #0c0d11
-      margin 0 0 38px 0
+      @media $sm
+        padding 40px 60px 0 0
+      @media $xs
+        padding 15px 30px 14px 13px
+      h3
+        margin-bottom 20px
     &-form
       margin 0 0 66px 0
       overflow hidden
@@ -508,6 +590,10 @@
         color #0c0d11
         display block
         margin 0 0 10px 0
+        @media $xs
+          font-size remify(12)
+          line-height 2.83
+          margin 0
       input
         border-bottom 1px solid #979797
         border-top transparent
@@ -516,6 +602,7 @@
         padding 5px
         width 100%
         margin-bottom 10px
+        background-color #fff
       textarea
         border 1px solid #979797
         outline none
@@ -523,6 +610,7 @@
         width 100%
         padding 5px
         height 92px
+        background-color rgba(255,255,255,1)
       button
         width 138px
         height 36px
@@ -535,4 +623,7 @@
         color #ffffff
         margin 42px 0 0 0
         float right
+        border none
+        @media $xs
+          float left
 

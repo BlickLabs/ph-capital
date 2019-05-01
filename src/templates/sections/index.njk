@@ -88,7 +88,9 @@
 </section>
 <section class="home-team">
   <img src="img/team-1.jpg"
-       srcset="img/team-1@2x.jpg 2x,img/team-1@3x.jpg 3x">
+       srcset="img/team-1@2x.jpg 2x,img/team-1@3x.jpg 3x" class="home-team-image-desktop">
+  <img src="img/team-2.jpg"
+       srcset="img/team-2@2x.jpg 2x,img/team-2@3x.jpg 3x" class="home-team-image-mobile">
   <div class="home-team-content">
     <span class="ph-number">
       /04
@@ -146,7 +148,7 @@
       </h3>
       <ul class="home-vre-list">
         <li class="home-vre-list-item">
-          <div class="home-vre-list-item-number">
+          <div class="ph-number">
             /01
           </div>
           <div class="home-vre-list-item-text">
@@ -155,7 +157,7 @@
           </div>
         </li>
         <li class="home-vre-list-item">
-          <div class="home-vre-list-item-number">
+          <div class="ph-number">
             /02
           </div>
           <div class="home-vre-list-item-text">
@@ -164,7 +166,7 @@
           </div>
         </li>
         <li class="home-vre-list-item">
-          <div class="home-vre-list-item-number">
+          <div class="ph-number">
             /03
           </div>
           <div class="home-vre-list-item-text">
@@ -175,7 +177,7 @@
           </div>
         </li>
         <li class="home-vre-list-item">
-          <div class="home-vre-list-item-number">
+          <div class="ph-number">
             /04
           </div>
           <div class="home-vre-list-item-text">
@@ -239,16 +241,57 @@
         </div>
       </figure>
     </div>
+    <div class="home-track-container-mobile owl-carousel owl-theme" id="tracks-carousel">
+      <figure class="home-track-image home-track-image-mobile">
+        <img src="img/track-1.jpg"
+             srcset="img/track-1@2x.jpg 2x, img/track-1@3x.jpg 3x">
+        <figcaption>PH I</figcaption>
+        <div class="home-track-image-hover">
+          <span>
+            PH I
+          </span>
+          <a href="#">
+            SEE MORE
+          </a>
+        </div>
+      </figure>
+      <figure class="home-track-image home-track-image-mobile">
+        <img src="img/track-2.jpg"
+             srcset="img/track-2@2x.jpg 2x, img/track-2@3x.jpg 3x">
+        <figcaption>PH II</figcaption>
+        <div class="home-track-image-hover">
+          <span>
+            PH II
+          </span>
+          <a href="#">
+            SEE MORE
+          </a>
+        </div>
+      </figure>
+      <figure class="home-track-image home-track-image-mobile">
+        <img src="img/track-3.jpg"
+             srcset="img/track-3@2x.jpg 2x, img/track-3@3x.jpg 3x">
+        <figcaption>PH III</figcaption>
+        <div class="home-track-image-hover">
+          <span>
+            PH III
+          </span>
+          <a href="#">
+            SEE MORE
+          </a>
+        </div>
+      </figure>
+    </div>
   </div>
 </section>
 <section class="home-contact">
   <img src="img/contact-1.png"
        srcset="img/contact-1@2x.png 2x,img/contact-1@3x.png 3x">
   <div class="home-contact-content">
-    <span class="home-contact-number">
+    <span class="ph-number">
       /08
     </span>
-    <h3 class="home-contact-title">
+    <h3 class="ph-title">
       CONTACT
     </h3>
     <form class="home-contact-form">
@@ -264,4 +307,19 @@
     </form>
   </div>
 </section>
+{% endblock %}
+
+{% block js_inline %}
+<script type="text/javascript">
+	let $tracks = $('#tracks-carousel');
+	$tracks.owlCarousel({
+		loop: true,
+		nav: false,
+		responsive:{
+			0:{
+				items:1
+			}
+		}
+	});
+</script>
 {% endblock %}
