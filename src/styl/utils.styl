@@ -104,9 +104,10 @@
     flex-wrap wrap
     @media $sl
       padding 6px 30px 0 30px
-    //@media $xs
-    //  display none
-
+    // @media $xs
+    // display none
+  &-item.active
+    border-bottom 6px solid #212c3e
   &-item
     font-size remify(13)
     font-weight $medium
@@ -118,6 +119,10 @@
     cursor pointer
     &:hover
       border-bottom 6px solid #212c3e
+    &-container
+      display none
+    &-container.show
+      display block
     &-title
       font-size remify(16)
       font-weight $medium
@@ -144,6 +149,16 @@
         text-align center
         color #333333
         margin 10px auto 0 auto
+      &-black
+        font-size remify(20)
+        font-weight $medium
+        line-height 1.7
+        letter-spacing 0.2px
+        text-align center
+        color #333333
+        @media $xs
+          font-size remify(12)
+          margin-top 15px
     &-address
       font-size 16px
       line-height 2.13
