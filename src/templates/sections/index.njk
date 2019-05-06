@@ -636,5 +636,39 @@
 			}
 		}
 	});
+	let $ph1 = $('#ph-1-carousel');
+	$ph1.owlCarousel({
+		loop: true,
+		nav: false,
+		dots:false,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:5
+			}
+		}
+	});
+	let $ph3 = $('#ph-3-carousel');
+	$ph3.owlCarousel({
+		loop: true,
+		nav: false,
+		dots:false,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:5
+			}
+		}
+	});
 </script>
 {% endblock %}

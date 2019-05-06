@@ -9,6 +9,10 @@ $(function(){
 		modal_ph_1.style.display = "block";
 		$('#ph-1-indiana').show()
 	};
+	mobile_btn_ph_1.onclick = function() {
+		modal_ph_1.style.display = "block";
+		$('#ph-1-indiana').show()
+	};
 
 	ph_1_close.onclick = function() {
 		modal_ph_1.style.display = "none";
@@ -29,6 +33,10 @@ $(function(){
 		modal_ph_2.style.display = "block";
 		$('#ph-2-tlacotalpan').show()
 	};
+	mobile_btn_ph_2.onclick = function() {
+		modal_ph_2.style.display = "block";
+		$('#ph-2-tlacotalpan').show()
+	};
 
 	ph_2_close.onclick = function() {
 		modal_ph_2.style.display = "none";
@@ -46,6 +54,10 @@ $(function(){
 	var ph_3_close = document.getElementById("modal-ph-3-close");
 
 	btn_ph_3.onclick = function() {
+		modal_ph_3.style.display = "block";
+		$('#ph-3-comercio').show();
+	};
+	mobile_btn_ph_3.onclick = function() {
 		modal_ph_3.style.display = "block";
 		$('#ph-3-comercio').show();
 	};
