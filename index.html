@@ -70,43 +70,41 @@
   </div>
   <div class="navbar-option-container">
     <div class="navbar-option-content">
-      <a href="#investment-strategy">
-        <span class="navbar-option">INVESTMENT STRATEGY</span>
+      <a href="#investment-strategy" class="navbar-option" title="INVESTMENT STRATEGY">
+        INVESTMENT STRATEGY
       </a>
     </div>
     <div class="navbar-option-content">
-      <a href="#smart-investments">
-        <span class="navbar-option">SMART INVESTMENTS</span>
+      <a href="#smart-investments" class="navbar-option" title="SMART INVESTMENTS">
+        SMART INVESTMENTS
       </a>
     </div>
     <div class="navbar-option-content">
-      <a href="#sponsorship">
-        <span class="navbar-option">SPONSORSHIP</span>
+      <a href="#sponsorship" class="navbar-option" title="SPONSORSHIP">
+        SPONSORSHIP
       </a>
     </div>
     <div class="navbar-option-content">
-      <a href="#development-partner">
-        <span class="navbar-option">OUR DEVELOPMENT PARTNER</span>
+      <a href="#development-partner" class="navbar-option" title="OUR DEVELOPMENT PARTNER">
+        OUR DEVELOPMENT PARTNER
       </a>
     </div>
     <div class="navbar-option-content">
-      <a href="#contact">
-        <span class="navbar-option">CONTACT</span>
+      <a href="#contact" class="navbar-option" title="CONTACT">
+        CONTACT
       </a>
     </div>
     <div class="navbar-option-content">
-      <a>
-        <span class="navbar-option navbar-option-separator">/</span>
+      <span class="navbar-option navbar-option-separator">/</span>
+    </div>
+    <div class="navbar-option-content">
+      <a href="#" class="navbar-option" title="EN">
+        EN
       </a>
     </div>
     <div class="navbar-option-content">
-      <a href="#">
-        <span class="navbar-option">EN</span>
-      </a>
-    </div>
-    <div class="navbar-option-content">
-      <a href="#">
-        <span class="navbar-option">ES</span>
+      <a href="#" class="navbar-option" title="ES">
+        ES
       </a>
     </div>
   </div>
@@ -383,7 +381,7 @@
           <span>
             PH I
           </span>
-          <a href="#">
+          <a id="trigger-ph-1">
             SEE MORE
           </a>
         </div>
@@ -409,7 +407,7 @@
           <span>
             PH III
           </span>
-          <a href="#">
+          <a id="trigger-ph-3">
             SEE MORE
           </a>
         </div>
@@ -424,7 +422,7 @@
           <span>
             PH I
           </span>
-          <a href="#">
+          <a id="mobile-trigger-ph-1">
             SEE MORE
           </a>
         </div>
@@ -437,7 +435,7 @@
           <span>
             PH II
           </span>
-          <a href="#">
+          <a id="mobile-trigger-ph-2">
             SEE MORE
           </a>
         </div>
@@ -450,7 +448,7 @@
           <span>
             PH III
           </span>
-          <a href="#">
+          <a id="mobile-trigger-ph-3">
             SEE MORE
           </a>
         </div>
@@ -463,7 +461,7 @@
        srcset="img/contact-1@2x.png 2x,img/contact-1@3x.png 3x">
   <div class="home-contact-content">
     <span class="ph-number">
-      /08
+      /07
     </span>
     <h3 class="ph-title">
       CONTACT
@@ -481,6 +479,56 @@
     </form>
   </div>
 </section>
+<div id="modal-ph-1" class="ph-modal">
+  <div class="ph-modal-content">
+    <span class="ph-modal-close" id="modal-ph-1-close">&times;</span>
+    <div class="ph-modal-title">
+      PH I
+    </div>
+    <div class="ph-modal-items owl-carousel owl-theme" id="ph-1-carousel">
+      <div class="ph-modal-item" data-content="ph-1-indiana">
+        Indiana 176
+      </div>
+      <div class="ph-modal-item" data-content="ph-1-dakota">
+        Dakota 322
+      </div>
+    </div>
+    <div class="ph-modal-item-container show" id="ph-1-indiana">
+      <div class="ph-modal-item-title">
+        Indiana 176
+      </div>
+      <div class="ph-modal-item-text">
+        Indiana 176 is a residential project of 6 apartments distributed in 3 levels and a roof garden.
+      </div>
+      <div class="ph-modal-item-text-black">
+        462 m2 habitable area | 511 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 6<br>
+        <span>Neighborhood:</span> Napoles<br>
+        <span>Date:</span> March 2016<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-1-dakota">
+      <div class="ph-modal-item-title">
+        Dakota 322
+      </div>
+      <div class="ph-modal-item-text">
+        Dakota 322 is a residential project of 6 apartments distributed in 3 levels and a roof garden.
+      </div>
+      <div class="ph-modal-item-text-black">
+        477 m2 habitable area | 526 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 6<br>
+        <span>Neighborhood:</span> Napoles<br>
+        <span>Date:</span>May 2016<br>
+      </div>
+    </div>
+  </div>
+</div>
 <div id="modal-ph-2" class="ph-modal">
   <div class="ph-modal-content">
     <span class="ph-modal-close" id="modal-ph-2-close">&times;</span>
@@ -488,39 +536,241 @@
       PH II
     </div>
     <div class="ph-modal-items owl-carousel owl-theme" id="ph-2-carousel">
-      <div class="ph-modal-item">
+      <div class="ph-modal-item" data-content="ph-2-tlacotalpan">
         TLACOTALPAN 146
       </div>
-      <div class="ph-modal-item">
+      <div class="ph-modal-item" data-content="ph-2-nebraska">
         NEBRASKA 159
       </div>
-      <div class="ph-modal-item">
+      <div class="ph-modal-item" data-content="ph-2-chicago">
         CHICAGO 61
       </div>
-      <div class="ph-modal-item">
+      <div class="ph-modal-item" data-content="ph-2-carolina">
         CAROLINA 149
       </div>
-      <div class="ph-modal-item">
+      <div class="ph-modal-item" data-content="ph-2-atlanta">
         ATLANTA 186
       </div>
     </div>
-    <div class="ph-modal-item-container">
+    <div class="ph-modal-item-container show" id="ph-2-tlacotalpan">
       <div class="ph-modal-item-title">
-        TLACOTALPAN 146
+        Tlacotalpan 146
       </div>
       <div class="ph-modal-item-text">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type
-        specimen book. It has survived not only five centuries, but also the leap into
-        electronic typesetting, remaining essentially unchanged.
+        Tlacotalpan 146 is a residential project of 4 apartments distributed in 3 levels and a roof garden.
+      </div>
+      <div class="ph-modal-item-text-black">
+        431 m2 habitable area | 518 m2 total area
       </div>
       <div class="ph-modal-item-address">
         <div class="ph-modal-item-address-quotes">//</div>
-        <span>Date:</span> November 2016. <br>
-        <span>Number of apartments:</span> 6 <br>
-        <span>Investment:</span> MX$17,767,236 <br>
-        <span>Revenue:</span> MX$20,750,000 <br>
+        <span>Number of apartments:</span> 4<br>
+        <span>Neighborhood:</span> Roma Sur<br>
+        <span>Date:</span> November 2016<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-2-nebraska">
+      <div class="ph-modal-item-title">
+        Nebraska 159
+      </div>
+      <div class="ph-modal-item-text">
+        Nebraska 159 is a residential project of 6 apartments distributed in 3 levels and a roof garden.
+      </div>
+      <div class="ph-modal-item-text-black">
+        453 m2 habitable area | 541 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 4<br>
+        <span>Neighborhood:</span> Napoles<br>
+        <span>Date:</span> November 2016<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-2-chicago">
+      <div class="ph-modal-item-title">
+        Chicago 61
+      </div>
+      <div class="ph-modal-item-text">
+        Chicago 61 is a residential project of 6 apartments distributed in 3 levels and a roof garden.
+      </div>
+      <div class="ph-modal-item-text-black">
+        379 m2 habitable area | 428 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 6<br>
+        <span>Neighborhood:</span> Napoles<br>
+        <span>Date:</span> November 2016<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-2-carolina">
+      <div class="ph-modal-item-title">
+        Carolina 149
+      </div>
+      <div class="ph-modal-item-text">
+        Carolina 149 is a residential project of 6 apartments distributed in 3 levels and a roof garden.
+      </div>
+      <div class="ph-modal-item-text-black">
+        544 m2 habitable area | 705 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 6<br>
+        <span>Neighborhood:</span> Noche Buena<br>
+        <span>Date:</span> May 2017<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-2-atlanta">
+      <div class="ph-modal-item-title">
+        Atlanta 186
+      </div>
+      <div class="ph-modal-item-text">
+        Atlanta 186 is a residential project of 6 apartments distributed in 3 levels and a roof garden.
+      </div>
+      <div class="ph-modal-item-text-black">
+        544 m2 habitable area | 704 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 6<br>
+        <span>Neighborhood:</span> Noche Buena<br>
+        <span>Date:</span> June 2017<br>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal-ph-3" class="ph-modal">
+  <div class="ph-modal-content">
+    <span class="ph-modal-close" id="modal-ph-3-close">&times;</span>
+    <div class="ph-modal-title">
+      PH III
+    </div>
+    <div class="ph-modal-items owl-carousel owl-theme" id="ph-3-carousel">
+      <div class="ph-modal-item" data-content="ph-3-comercio">
+        Comercio 44
+      </div>
+      <div class="ph-modal-item" data-content="ph-3-concepcion">
+        Concepción Beistegui 512
+      </div>
+      <div class="ph-modal-item" data-content="ph-3-coyoacan">
+        Coyoacan 1424
+      </div>
+      <div class="ph-modal-item" data-content="ph-3-colima">
+        Colima 49
+      </div>
+      <div class="ph-modal-item" data-content="ph-3-oklahoma">
+        Oklahoma 65
+      </div>
+      <div class="ph-modal-item" data-content="ph-3-miller">
+        Mier y Pesado 136
+      </div>
+    </div>
+    <div class="ph-modal-item-container show" id="ph-3-comercio">
+      <div class="ph-modal-item-title">
+        Comercio 44
+      </div>
+      <div class="ph-modal-item-text">
+        Comercio 44 is a residential project of 7 apartments distributed in 3 levels and a roof garden. One block from Parque Jardin Morelos and a few steps from the Hipodromo Condesa and Napoles neighborhood.
+      </div>
+      <div class="ph-modal-item-text-black">
+        646 m2 habitable area | 834 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 7<br>
+        <span>Neighborhood:</span> Escandon<br>
+        <span>Date:</span> February 2018<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-3-concepcion">
+      <div class="ph-modal-item-title">
+        Concepción Beistegui 512
+      </div>
+      <div class="ph-modal-item-text">
+        Concepcion Beistegui 512 is a residential project of 8 apartments distributed in
+        4 levels and a roof garden. It has wide communication routes and countless shopping malls,
+        restaurants and other services on the Insurgentes corridor.
+      </div>
+      <div class="ph-modal-item-text-black">
+        1,187 m2 habitable area | 1,417 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 8<br>
+        <span>Neighborhood:</span> Del Valle Centro<br>
+        <span>Date:</span> November 2017<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-3-coyoacan">
+      <div class="ph-modal-item-title">
+        Coyoacan 1424
+      </div>
+      <div class="ph-modal-item-text">
+        Coyoacan 1424 is a residential project of 24 apartments distributed in 4
+        levels and a roof garden. It is surrounded by Parks, restaurants, shopping
+        malls, supermarkets and very important roads such as Av. Insurgentes and Av. Universidad.
+      </div>
+      <div class="ph-modal-item-text-black">
+        1,824 m2 habitable area | 2,204 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 24<br>
+        <span>Neighborhood:</span> Del Valle Centro<br>
+        <span>Date:</span> June 2018<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-3-colima">
+      <div class="ph-modal-item-title">
+        Colima 49
+      </div>
+      <div class="ph-modal-item-text">
+        Colima 49 is a residential project of 13 apartments distributed in 4 levels
+        and a roof garden. Located in a neighborhood listed as one of the best
+        to live in Mexico City.
+      </div>
+      <div class="ph-modal-item-text-black">
+        948 m2 habitable area | 1,299 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 13<br>
+        <span>Neighborhood:</span> Roma Norte<br>
+        <span>Date:</span> December 2018<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-3-oklahoma">
+      <div class="ph-modal-item-title">
+        Oklahoma 65
+      </div>
+      <div class="ph-modal-item-text">
+        Oklahoma 65 is a residential project of 80 apartments distributed in 6 levels and a roof garden.
+      </div>
+      <div class="ph-modal-item-text-black">
+        6,006 m2 habitable area | 7,406 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 80<br>
+        <span>Neighborhood:</span> Napoles<br>
+        <span>Date:</span> December 2018<br>
+      </div>
+    </div>
+    <div class="ph-modal-item-container" id="ph-3-miller">
+      <div class="ph-modal-item-title">
+        Mier y Pesado 136
+      </div>
+      <div class="ph-modal-item-text">
+        Mier y Pesado 136 is a residential project of 24 apartments distributed in 4 levels and a roof garden.
+      </div>
+      <div class="ph-modal-item-text-black">
+        3,477 m2 habitable area | 4,477 m2 total area
+      </div>
+      <div class="ph-modal-item-address">
+        <div class="ph-modal-item-address-quotes">//</div>
+        <span>Number of apartments:</span> 24<br>
+        <span>Neighborhood:</span> Del Valle Norte<br>
+        <span>Date:</span> March 2019<br>
       </div>
     </div>
   </div>
