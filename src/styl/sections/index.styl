@@ -9,12 +9,13 @@
     align-items flex-start
     position relative
     padding-top 227px
-    @media $sm
+    @media screen and (max-width: 920px)
       justify-content center
       align-items center
       padding 0 60px
     @media $xs
-      align-items center
+      height 524px
+      align-items flex-start
       padding 0 20px 0 20px
     &-content
       margin 0 0 0 16.51%
@@ -22,36 +23,8 @@
         margin 0 0 0 5%
       @media screen and (max-width: 920px)
         margin 0
-      h1
-        color white
-        font-size remify(31)
-        line-height 2.29
-        letter-spacing 4.6px
-        font-weight $normal
-        text-transform uppercase
-        margin 0
-        @media $lg
-          font-size remify(27)
-        @media screen and (max-width: 1120px)
-          font-size remify(25)
-        @media screen and (max-width: 920px)
-          text-align center
-          line-height 2.25
-          letter-spacing 2.4px
-          br
-            display none
-        @media $xs
-          font-size remify(14)
-          line-height 2
-          letter-spacing 2.4px
-          text-align center
-          color #ffffff
-        span
-          font-weight $medium
-          font-style italic
-          @media $xs
-            letter-spacing 2.2px
-
+      @media $xs
+        margin-top 92px
       h2
         color #5e78b3
         font-size remify(17)
@@ -61,16 +34,64 @@
         text-align left
         text-transform uppercase
         margin 0
-
+        br
+          display none
         @media screen and (max-width: 920px)
           text-align center
           font-size remify(17)
           line-height 2.08
           letter-spacing 5.6px
+          margin-bottom 41px
+          br
+            display block
         @media $xs
-          font-size 12px
+          font-size remify(12)
 
-    p
+    &-text
+      color white
+      font-size remify(31)
+      line-height 2.29
+      letter-spacing 4.6px
+      font-weight $normal
+      text-transform uppercase
+      margin 0
+      @media $lg
+        font-size remify(27)
+      @media screen and (max-width: 1120px)
+        font-size remify(25)
+      @media screen and (max-width: 920px)
+        display none
+      span
+        font-weight $medium
+        font-style italic
+        @media $xs
+          letter-spacing 2.2px
+
+    &-text-mobile
+      color white
+      font-size remify(25)
+      font-weight $normal
+      text-transform uppercase
+      margin 0
+      text-align center
+      line-height 2.25
+      letter-spacing 2.4px
+      display none
+      @media screen and (max-width: 920px)
+        display block
+      @media $xs
+        font-size remify(16)
+        line-height 2
+        letter-spacing 2.4px
+        text-align center
+        color #ffffff
+      span
+        font-weight $medium
+        font-style italic
+        @media $xs
+          letter-spacing 2.2px
+
+    &-action
       position absolute
       display flex
       bottom 77px
@@ -79,13 +100,14 @@
       margin 0
       align-items center
       justify-content flex-start
-      @media $sl
+      @media screen and (max-width: 1120px)
         left 5%
       @media screen and (max-width: 920px)
         flex-direction column
         text-align center
         justify-content center
         align-items center
+        left 0
         img
           order 2
       span
@@ -114,14 +136,17 @@
     @media $sm
       flex-direction column
       padding-bottom 59px
-    img
-      //width 575px
+    &-image
       width 40%
       height auto
       max-width 575px
       @media $sm
-        max-width 100%
+        display none
+      &-mobile
+        display none
         width 100%
+        @media $sm
+          display block
     &-content
       padding 70px 0 0 179px
       display flex
@@ -172,6 +197,7 @@
         margin-bottom 50px
         line-height 1.43
         @media $sm
+          margin 0
           br:nth-child(1)
             display none
     &-information
