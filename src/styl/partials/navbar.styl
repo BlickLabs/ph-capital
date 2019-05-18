@@ -2,10 +2,9 @@
   align-items center
   background-color transparent
   display flex
-  height 63px
   justify-content space-between
   left 0
-  padding 68px 84px 0 84px
+  padding 48px 84px 0 102px
   position fixed
   top 0
   width 100%
@@ -14,10 +13,7 @@
   &-logo
     height auto
     width 123px
-    margin 0 0 0 18px
-
-    @media $lg
-      margin 7px 0 0 18px
+    margin 0
 
   &-scroll
     align-items center
@@ -48,20 +44,26 @@
       display flex
       flex-direction row
       font-size 0
+      //border 1px solid white
 
     &-content
-      margin-left 25px
       position relative
-      @media $lg
-        margin-left 25px
+      margin-left 15px
 
+  &-language
     &-separator
       color #5e78b3
       font-size remify(11)
       line-height 72px
       letter-spacing 3.38px
+      cursor auto
+    &-container
+      display flex
+      flex-direction row
 
-
+    &-content
+      position relative
+      margin-left 15px
 
 .hamburger
   &-language-option
@@ -87,7 +89,7 @@
 .active-section
   color white
 
-@media screen and (max-width: 1389px)
+@media screen and (max-width: 1310px)
   .navbar
     justify-content space-between
     height 70px

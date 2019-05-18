@@ -37,7 +37,7 @@
       and high dense cities create an enormous variety of opportunities to develop and
       finance real estate products.
     </p>
-    <a href="#track-record" class="ph-button">
+    <a href="#track-record" class="ph-button home-investment-button">
       PROJECTS
     </a>
   </div>
@@ -97,7 +97,7 @@
       /04
     </span>
     <h3 class="ph-title">
-      Sponshorship
+      SPONSORSHIP
     </h3>
     <p class="ph-description">
       Our board of advisors and management possess significant
@@ -131,7 +131,7 @@
       VRE <a href="https://www.vre.com.mx" target="_blank">(www.vre.com.mx)</a>
       is a Mexican real estate developer.
       The Firm is currently committed into developing vertical
-      residential properties in the Heart of Mexico City. PH Capital has
+      residential properties in the Heart of Mexico City. <br>PH Capital has
       participated as equity sponsor in the projects promoted by VRE.
     </p>
   </div>
@@ -200,9 +200,9 @@
     </span>
     <h3 class="ph-title">
       Investment Vehicles <br>
-      Track Record
+      <span>Track Record</span>
     </h3>
-    <div class="home-track-container">
+    <div class="home-track-container owl-carousel owl-theme" id="tracks-carousel">
       <figure class="home-track-image">
         <img src="img/track-1.jpg"
              srcset="img/track-1@2x.jpg 2x, img/track-1@3x.jpg 3x">
@@ -238,47 +238,6 @@
             PH III
           </span>
           <a id="trigger-ph-3">
-            SEE MORE
-          </a>
-        </div>
-      </figure>
-    </div>
-    <div class="home-track-container-mobile owl-carousel owl-theme" id="tracks-carousel">
-      <figure class="home-track-image home-track-image-mobile">
-        <img src="img/track-1.jpg"
-             srcset="img/track-1@2x.jpg 2x, img/track-1@3x.jpg 3x">
-        <figcaption>PH I</figcaption>
-        <div class="home-track-image-hover">
-          <span>
-            PH I
-          </span>
-          <a id="mobile-trigger-ph-1">
-            SEE MORE
-          </a>
-        </div>
-      </figure>
-      <figure class="home-track-image home-track-image-mobile">
-        <img src="img/track-2.jpg"
-             srcset="img/track-2@2x.jpg 2x, img/track-2@3x.jpg 3x">
-        <figcaption>PH II</figcaption>
-        <div class="home-track-image-hover">
-          <span>
-            PH II
-          </span>
-          <a id="mobile-trigger-ph-2">
-            SEE MORE
-          </a>
-        </div>
-      </figure>
-      <figure class="home-track-image home-track-image-mobile">
-        <img src="img/track-3.jpg"
-             srcset="img/track-3@2x.jpg 2x, img/track-3@3x.jpg 3x">
-        <figcaption>PH III</figcaption>
-        <div class="home-track-image-hover">
-          <span>
-            PH III
-          </span>
-          <a id="mobile-trigger-ph-3">
             SEE MORE
           </a>
         </div>
@@ -613,9 +572,20 @@
 	$tracks.owlCarousel({
 		loop: true,
 		nav: false,
+		margin: 30,
 		responsive:{
 			0:{
-				items:1
+				items:1,
+				nav:true
+			},
+			600:{
+				items:3,
+				nav:false
+			},
+			1000:{
+				items:3,
+				nav:false,
+				loop:false
 			}
 		}
 	});
