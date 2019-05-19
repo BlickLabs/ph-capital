@@ -68,10 +68,8 @@
     to participate in the definition of the business plans and predevelopment
     activities seeking to create superior value through strategy and planning.
   </div>
-<!--  <div class="home-strategy-image">-->
     <img class="home-strategy-image" src="img/strategy-1.png"
          srcset="img/strategy-1@2x.png 2x, img/strategy-1@3x.png 3x">
-<!--  </div>-->
 </section>
 <section class="home-smart" id="smart-investments">
   <div class="home-smart-left">
@@ -209,7 +207,7 @@
       /06
     </span>
     <h3 class="ph-title">
-      Investment Vehicles <br>
+      <div class="home-track-title-hide">Investment Vehicles</div><br>
       <span>Track Record</span>
     </h3>
     <div class="home-track-container owl-carousel owl-theme" id="tracks-carousel">
@@ -217,6 +215,9 @@
         <img src="img/track-1.jpg"
              srcset="img/track-1@2x.jpg 2x, img/track-1@3x.jpg 3x">
         <figcaption>PH I</figcaption>
+        <a class="home-track-label">
+          SEE MORE
+        </a>
         <div class="home-track-image-hover">
           <span>
             PH I
@@ -230,6 +231,9 @@
         <img src="img/track-2.jpg"
              srcset="img/track-2@2x.jpg 2x, img/track-2@3x.jpg 3x">
         <figcaption>PH II</figcaption>
+        <a class="home-track-label">
+          SEE MORE
+        </a>
         <div class="home-track-image-hover">
           <span>
             PH II
@@ -243,6 +247,9 @@
         <img src="img/track-3.jpg"
              srcset="img/track-3@2x.jpg 2x, img/track-3@3x.jpg 3x">
         <figcaption>PH III</figcaption>
+        <a class="home-track-label">
+          SEE MORE
+        </a>
         <div class="home-track-image-hover">
           <span>
             PH III
@@ -580,25 +587,28 @@
 <script type="text/javascript">
 	let $tracks = $('#tracks-carousel');
 	$tracks.owlCarousel({
-		loop: true,
-		nav: false,
-		margin: 30,
+    nav: false,
+    dots: false,
+    loop: false,
 		responsive:{
 			0:{
 				items:1,
-				nav:true
+        margin: 13,
+        dots: false,
+        stagePadding: 20
 			},
-			600:{
-				items:3,
-				nav:false
+			576:{
+				items:2,
+        margin: 30,
+        dots: true,
 			},
 			1000:{
 				items:3,
-				nav:false,
-				loop:false
+        margin: 30,
 			}
 		}
 	});
+
 	let $ph2 = $('#ph-2-carousel');
 	$ph2.owlCarousel({
 		loop: true,

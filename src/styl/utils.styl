@@ -50,25 +50,19 @@
     font-size remify(11)
 
 
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot.active span:hover
-  background: #212c3e
-.owl-theme .owl-dots .owl-dot span:hover
-  background #212c3e
+@media screen and (min-width: 1000px)
+  .owl-carousel.owl-drag .owl-item
+    transition all 0.3s ease
+    max-width 406px
+    &:hover
+      transform scale(1.2)
+      z-index 2
+  .owl-carousel .owl-stage-outer
+    overflow unset
 
-.owl-carousel.owl-drag .owl-item
-  transition all 0.3s ease
-  max-width 406px
-  &:hover
-    transform scale(1.2)
-    z-index 2
-
-.owl-carousel .owl-stage-outer
-  overflow unset
-
-.owl-carousel .owl-stage
-  display flex
-  justify-content center
+@media screen and (max-width: 600px)
+  .owl-stage
+    padding-left 0 !important
 
 .ph-modal
   display none
