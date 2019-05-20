@@ -2,7 +2,7 @@ var last_known_scroll_position = 0;
 var ticking = false;
 
 var siteNavbar = document.querySelector('.navbar');
-var forced_color = false
+var forced_color = false;
 
 function doSomething(scroll_pos) {
   if (scroll_pos > 30) {
@@ -71,3 +71,16 @@ showHamburger.addEventListener('click', function(e) {
   showMenu();
 });
 
+$('.navbar-option-desktop').click(function() {
+  $('.navbar-option-desktop').each(function (key, value) {
+    $(value).removeClass('navbar-option-active');
+  });
+  $(this).addClass('navbar-option-active');
+})
+
+$('.hamburger-text').click(function() {
+  $('.hamburger-text').each(function (key, value) {
+    $(value).removeClass('hamburger-text-active');
+  });
+  $(this).addClass('hamburger-text-active');
+})
