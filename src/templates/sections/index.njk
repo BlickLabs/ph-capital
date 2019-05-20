@@ -215,14 +215,14 @@
         <img src="img/track-1.jpg"
              srcset="img/track-1@2x.jpg 2x, img/track-1@3x.jpg 3x">
         <figcaption>PH I</figcaption>
-        <a class="home-track-label">
+        <a class="home-track-label ph-modal-trigger" data-target="modal-ph-1">
           SEE MORE
         </a>
         <div class="home-track-image-hover">
           <span>
             PH I
           </span>
-          <a id="trigger-ph-1">
+          <a class="ph-modal-trigger" data-target="modal-ph-1">
             SEE MORE
           </a>
         </div>
@@ -231,14 +231,14 @@
         <img src="img/track-2.jpg"
              srcset="img/track-2@2x.jpg 2x, img/track-2@3x.jpg 3x">
         <figcaption>PH II</figcaption>
-        <a class="home-track-label">
+        <a class="home-track-label ph-modal-trigger" data-target="modal-ph-2">
           SEE MORE
         </a>
         <div class="home-track-image-hover">
           <span>
             PH II
           </span>
-          <a id="trigger-ph-2">
+          <a class="ph-modal-trigger" data-target="modal-ph-2">
             SEE MORE
           </a>
         </div>
@@ -247,14 +247,14 @@
         <img src="img/track-3.jpg"
              srcset="img/track-3@2x.jpg 2x, img/track-3@3x.jpg 3x">
         <figcaption>PH III</figcaption>
-        <a class="home-track-label">
+        <a class="home-track-label ph-modal-trigger" data-target="modal-ph-3">
           SEE MORE
         </a>
         <div class="home-track-image-hover">
           <span>
             PH III
           </span>
-          <a id="trigger-ph-3">
+          <a class="ph-modal-trigger" data-target="modal-ph-3">
             SEE MORE
           </a>
         </div>
@@ -287,12 +287,17 @@
 </section>
 <div id="modal-ph-1" class="ph-modal">
   <div class="ph-modal-content">
-    <span class="ph-modal-close" id="modal-ph-1-close">&times;</span>
+    <span class="ph-modal-close">
+      <svg>
+        <line x1='0' y1='100%' x2='100%' y2='0' />
+        <line x1='0' y1='0' x2='100%' y2='100%' />
+      </svg>
+    </span>
     <div class="ph-modal-title">
       PH I
     </div>
     <div class="ph-modal-items owl-carousel owl-theme" id="ph-1-carousel">
-      <div class="ph-modal-item" data-content="ph-1-indiana">
+      <div class="ph-modal-item ph-modal-item-active" data-content="ph-1-indiana">
         Indiana 176
       </div>
       <div class="ph-modal-item" data-content="ph-1-dakota">
@@ -337,7 +342,12 @@
 </div>
 <div id="modal-ph-2" class="ph-modal">
   <div class="ph-modal-content">
-    <span class="ph-modal-close" id="modal-ph-2-close">&times;</span>
+    <span class="ph-modal-close">
+      <svg>
+        <line x1='0' y1='100%' x2='100%' y2='0' />
+        <line x1='0' y1='0' x2='100%' y2='100%' />
+      </svg>
+    </span>
     <div class="ph-modal-title">
       PH II
     </div>
@@ -447,7 +457,12 @@
 </div>
 <div id="modal-ph-3" class="ph-modal">
   <div class="ph-modal-content">
-    <span class="ph-modal-close" id="modal-ph-3-close">&times;</span>
+    <span class="ph-modal-close">
+      <svg>
+        <line x1='0' y1='100%' x2='100%' y2='0' />
+        <line x1='0' y1='0' x2='100%' y2='100%' />
+      </svg>
+    </span>
     <div class="ph-modal-title">
       PH III
     </div>
@@ -609,11 +624,10 @@
 		}
 	});
 
-	let $ph2 = $('#ph-2-carousel');
-	$ph2.owlCarousel({
-		loop: true,
+	let $ph1 = $('#ph-1-carousel');
+	$ph1.owlCarousel({
 		nav: false,
-    dots:false,
+		dots:false,
 		responsive:{
 			0:{
 				items:1
@@ -622,13 +636,12 @@
 				items:3
 			},
 			1000:{
-				items:5
+				items:2
 			}
 		}
 	});
-	let $ph1 = $('#ph-1-carousel');
-	$ph1.owlCarousel({
-		loop: true,
+	let $ph2 = $('#ph-2-carousel');
+	$ph2.owlCarousel({
 		nav: false,
 		dots:false,
 		responsive:{
@@ -645,7 +658,7 @@
 	});
 	let $ph3 = $('#ph-3-carousel');
 	$ph3.owlCarousel({
-		loop: true,
+		loop: false,
 		nav: false,
 		dots:false,
 		responsive:{
@@ -656,7 +669,8 @@
 				items:3
 			},
 			1000:{
-				items:5
+				items:4,
+				stagePadding: 100,
 			}
 		}
 	});

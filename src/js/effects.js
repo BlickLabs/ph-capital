@@ -1,79 +1,47 @@
 
 $(function(){
-	var btn_ph_1 = document.getElementById("trigger-ph-1");
-	var mobile_btn_ph_1 = document.getElementById("mobile-trigger-ph-1");
-	var modal_ph_1 = document.getElementById('modal-ph-1');
-	var ph_1_close = document.getElementById("modal-ph-1-close");
+	var $modal_trigger =  $('.ph-modal-trigger');
+	var $modal_close = $('.ph-modal-close');
+	var $modal_item = $('.ph-modal-item');
 
-	btn_ph_1.onclick = function() {
-		modal_ph_1.style.display = "block";
-		$('#ph-1-indiana').show()
-	};
-	mobile_btn_ph_1.onclick = function() {
-		modal_ph_1.style.display = "block";
-		$('#ph-1-indiana').show()
-	};
-
-	ph_1_close.onclick = function() {
-		modal_ph_1.style.display = "none";
-	};
-
-	window.onclick = function(event) {
-		if (event.target === modal_ph_1) {
-			modal_ph_1.style.display = "none";
+	$modal_trigger.click(function () {
+		var target_id = '#' + $(this).attr('data-target');
+		console.log(target_id);
+		$(target_id).show();
+		$.each($('.ph-modal-item-container'), function (index, value) {
+			$(value).hide()
+		});
+		if (target_id === '#modal-ph-1') {
+			$('div[data-content="ph-1-indiana"]').addClass('ph-modal-item-active');
+			$('#ph-1-indiana').show()
+		} else if (target_id === '#modal-ph-2') {
+			$('div[data-content="ph-2-tlacotalpan"]').addClass('ph-modal-item-active');
+			$('#ph-2-tlacotalpan').show()
+		} else if (target_id === '#modal-ph-3') {
+			$('div[data-content="ph-3-comercio"]').addClass('ph-modal-item-active');
+			$('#ph-3-comercio').show()
 		}
-	};
+	});
 
-	var btn_ph_2 = document.getElementById("trigger-ph-2");
-	var mobile_btn_ph_2 = document.getElementById("mobile-trigger-ph-2");
-	var modal_ph_2 = document.getElementById('modal-ph-2');
-	var ph_2_close = document.getElementById("modal-ph-2-close");
+	$modal_close.click(function () {
+		var parent = $(this).parent().parent();
+		parent.hide()
+		$modal_item.each(function (key, value) {
+			$(value).removeClass('ph-modal-item-active');
+		});
+	});
 
-	btn_ph_2.onclick = function() {
-		modal_ph_2.style.display = "block";
-		$('#ph-2-tlacotalpan').show()
-	};
-	mobile_btn_ph_2.onclick = function() {
-		modal_ph_2.style.display = "block";
-		$('#ph-2-tlacotalpan').show()
-	};
+	$modal_item.click(function () {
+		$modal_item.each(function (key, value) {
+			$(value).removeClass('ph-modal-item-active');
+		});
+		$(this).addClass('ph-modal-item-active');
+		var target_id = '#' + $(this).attr('data-content');
+		$(target_id).show();
+	});
 
-	ph_2_close.onclick = function() {
-		modal_ph_2.style.display = "none";
-	};
-
-	window.onclick = function(event) {
-		if (event.target === modal_ph_2) {
-			modal_ph_2.style.display = "none";
-		}
-	};
-
-	var btn_ph_3 = document.getElementById("trigger-ph-3");
-	var mobile_btn_ph_3 = document.getElementById("mobile-trigger-ph-3");
-	var modal_ph_3 = document.getElementById('modal-ph-3');
-	var ph_3_close = document.getElementById("modal-ph-3-close");
-
-	btn_ph_3.onclick = function() {
-		modal_ph_3.style.display = "block";
-		$('#ph-3-comercio').show();
-	};
-	mobile_btn_ph_3.onclick = function() {
-		modal_ph_3.style.display = "block";
-		$('#ph-3-comercio').show();
-	};
-
-	ph_3_close.onclick = function() {
-		modal_ph_3.style.display = "none";
-	};
-
-	window.onclick = function(event) {
-		if (event.target === modal_ph_3) {
-			modal_ph_3.style.display = "none";
-		}
-	};
-
-	$.each($('.ph-modal-item'), function (index, value) {
-		$(value).on('click', function () {
+	$.each($modal_item, function (index, value) {
+		$(value).click(function () {
 			var link_id = value.getAttribute("data-content");
 			$.each($('.ph-modal-item-container'), function (index, value) {
 				var content_id = value.id;
