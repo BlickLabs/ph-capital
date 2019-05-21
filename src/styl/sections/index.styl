@@ -570,9 +570,11 @@
     padding 0 127px 95px 127px
     @media screen and (max-width: 1200px)
       padding 0 75px 95px 75px
+    @media screen and (max-width: 999px)
+      background-color #f6f6f6
+      padding 25px 75px 40px 75px
     @media $sm
       padding 40px 60px
-      background-color #f6f6f6
     @media $xs
       padding 5px 13px 43px 13px
     h3
@@ -616,6 +618,7 @@
       letter-spacing 1.8px
       text-align center
       cursor pointer
+      z-index 1
       @media screen and (max-width 999px)
         display block
 
