@@ -132,7 +132,7 @@
   <div class="hamburger-menu-container" id="menuContainer">
     <div class="hamburger-menu-body nunitosans-regular" data-attribute="">
       <div class="hamburger-text-container">
-        <a href="#nvestment-strategy">
+        <a href="#investment-strategy">
           <span class="hamburger-text">INVESTMENT STRATEGY</span>
         </a>
       </div>
@@ -808,17 +808,8 @@
 	$ph1.owlCarousel({
 		nav: false,
 		dots:false,
-		responsive:{
-			0:{
-				items:1
-			},
-			600:{
-				items:3
-			},
-			1000:{
-				items:2
-			}
-		}
+    items: 2,
+    loop: false,
 	});
 	let $ph2 = $('#ph-2-carousel');
 	$ph2.owlCarousel({
@@ -826,12 +817,9 @@
 		dots:false,
 		responsive:{
 			0:{
-				items:1
+				autoWidth: true,
 			},
-			600:{
-				items:3
-			},
-			1000:{
+			1100:{
 				items:5
 			}
 		}
@@ -841,18 +829,7 @@
 		loop: false,
 		nav: false,
 		dots:false,
-		responsive:{
-			0:{
-				items:1
-			},
-			600:{
-				items:3
-			},
-			1000:{
-				items:4,
-				stagePadding: 100,
-			}
-		}
+    autoWidth: true,
 	});
 </script>
 
