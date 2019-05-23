@@ -71,11 +71,16 @@
   .home-track-container .owl-stage
     padding-left 0 !important
 
+@media screen and (min-width: 1500px)
+  .home-track-container .owl-stage
+    display flex
+    justify-content center
+
 
 #ph-3-carousel .ph-modal-item
   margin-right 40px
   @media $xs
-    margin-right 30px
+    margin-right 20px
 
 #ph-2-carousel .ph-modal-item
   @media screen and (max-width: 1100px)
@@ -144,8 +149,8 @@
     flex-wrap wrap
     @media $sl
       padding 6px 30px 0 30px
-    // @media $xs
-    // display none
+    @media $xs
+      padding 6px 10px 0 10px
   &-item.active
     border-bottom 6px solid #212c3e
   &-item
@@ -176,7 +181,8 @@
       text-transform uppercase
       margin-top 15px
       @media $xs
-        display none
+        font-size remify(12)
+        line-height 3
     &-text
       font-size remify(16)
       line-height 2.13

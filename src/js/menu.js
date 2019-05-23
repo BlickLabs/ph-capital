@@ -7,11 +7,6 @@ var forced_color = false;
 function doSomething(scroll_pos) {
   if (scroll_pos > 30) {
     siteNavbar.classList.add('navbar-scroll');
-
-  } else {
-    if (!forced_color) {
-      siteNavbar.classList.remove('navbar-scroll');
-    }
   }
 }
 
@@ -37,16 +32,19 @@ function showMenu() {
   var menuWith = document.querySelector('#menuContainer').style.width;
   if (menuWith === '85%') {
     document.querySelector('#menuContainer').style.width = '0%';
+    if (window.scrollY < 30) {
+      siteNavbar.classList.remove('navbar-scroll');
+    }
 
   } else {
     document.querySelector('#menuContainer').style.width = '85%';
     siteNavbar.classList.add('navbar-scroll');
-    forced_color = true
   }
 }
 
 function hideMenu() {
   document.querySelector('#menuContainer').style.width = '0%';
+  console.log(window.scrollY)
 }
 
 window.addEventListener('click', function(e) {

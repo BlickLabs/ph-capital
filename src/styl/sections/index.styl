@@ -166,7 +166,7 @@
           line-height 4
     &-information
       width 78%
-      margin 16px 0 30px 0
+      margin 16px 0 37px 0
       @media $sl
         margin 10px 0 25px 0
       @media $xs
@@ -438,8 +438,21 @@
           margin-bottom 20px
       &-title
         color white
+        position relative
         @media $sm
           br:nth-child(1)
+            display none
+        span
+          height 1px
+          width 120%
+          position absolute
+          background-color #5e78b3
+          bottom -70px
+          @media $sl
+            width 110%
+          @media $md
+            width 165%
+          @media $sm
             display none
     &-right
       flex-basis 45%
@@ -451,17 +464,15 @@
       @media $sl
         padding 0 50px
       @media $sm
-        padding 40px 60px
+        padding 60px 60px 60px 40px
       @media $xs
-        padding 35px 30px 14px 13px
+        padding 58px 30px 14px 13px
       img
-        height 103px
-        width 301px
         object-fit contain
-        @media $lg
-          height 87px
-        @media $sl
-          height 70px
+        //@media $lg
+        //  height 87px
+        //@media $sl
+        //  height 70px
         @media $sm
           display none
       p
@@ -477,11 +488,15 @@
       @media $sm
         display block
         position absolute
-        height 70%
-        width 1px
+        height 180px
+        width 2px
         background-color #5e78b3
         top 45%
         right 7%
+      @media $xs
+        right 13%
+        top 62px
+        height 130px
   &-vre
     display flex
     justify-content space-between
@@ -511,13 +526,15 @@
       @media $xs
         padding 15px 30px 14px 13px
       img
-        margin-top 10px
+        margin-top 15px
+        @media screen and (max-width: 1300px)
+          margin-top 8px
         @media $sm
           margin-top -10px
-          width 51px
-          height 49px
         @media $xs
-          margin-top -5px
+          margin 0
+          width 40px
+          height 40px
     &-right
       flex-basis 28%
       max-width 403px
@@ -567,7 +584,7 @@
             color #333333
             margin-left 20px
   &-track
-    padding 0 127px 95px 127px
+    padding 0 127px 70px 127px
     @media screen and (max-width: 1200px)
       padding 0 75px 95px 75px
     @media screen and (max-width: 999px)
@@ -576,7 +593,7 @@
     @media $sm
       padding 40px 60px
     @media $xs
-      padding 5px 13px 43px 13px
+      padding 5px 0 43px 0
     h3
       line-height 0.8
       @media screen and (max-width 999px)
@@ -594,13 +611,17 @@
           display block
           margin-top 30px
           margin-bottom 15px
+          padding 0 13px
+      .ph-title
+        @media $xs
+          padding 0 13px
     &-container
       display flex
       margin 47px auto 0 auto
       align-items center
       justify-content space-between
       @media $xs
-        margin-top 20px
+        margin-top 25px
     &-label
       border solid 1px #ffffff
       background-color transparent
@@ -628,7 +649,6 @@
       position relative
       flex-basis 31.5%
       max-height 421px
-      cursor pointer
       text-align center
       overflow hidden
       img
@@ -751,7 +771,7 @@
         margin-bottom 10px
         @media $xs
           font-size remify(12)
-          line-height 2.83
+          line-height 1
           margin 0
       input
         border-bottom 1px solid #979797
@@ -785,3 +805,5 @@
         margin 42px 0 0 0
         float right
         border none
+        @media $xs
+          margin-top 16px
