@@ -59,6 +59,9 @@
 
 @media screen and (min-width: 1000px)
   .home-track-container.owl-carousel.owl-drag .owl-item
+    width 31% !important
+@media screen and (min-width: 1000px)
+  .home-track-container.owl-carousel.owl-drag .owl-item
     transition all 0.3s ease
     max-width 406px
     &:hover
@@ -71,9 +74,15 @@
   .home-track-container .owl-stage
     padding-left 0 !important
 
-@media screen and (min-width: 1500px)
+@media screen and (min-width: 1000px)
   .home-track-container .owl-stage
     display flex
+    justify-content space-between
+    &:after
+      display none
+
+@media screen and (min-width: 1500px)
+  .home-track-container .owl-stage
     justify-content center
 
 
