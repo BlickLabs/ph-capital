@@ -808,7 +808,13 @@
 		nav: false,
 		dots:false,
     autoWidth: true,
-	});
+  });
+  
+  $("#modal-ph-1").on("show", function () {
+    $("body").addClass("modal-open");
+  }).on("hidden", function () {
+    $("body").removeClass("modal-open")
+  });
 </script>
 
   </body>
