@@ -23,9 +23,11 @@
     box-shadow 0 6px 8px 0 rgba(0,0,0,0.2)
     height 91px
     padding 0 84px 0 84px
+
   &-option-active
     font-weight bold !important
     line-height 6.8 !important
+
   &-option
     color white
     font-family "Futura"
@@ -34,9 +36,11 @@
     letter-spacing 3px
     -webkit-font-smoothing antialiased
     display block
+
     &:hover
       font-weight bold
       line-height 6.8 !important
+
     &:after
       display block
       content attr(title)
@@ -44,15 +48,19 @@
       height 0
       overflow hidden
       visibility hidden
+
     &-container
       display flex
       flex-direction row
       font-size 0
-      //border 1px solid white
 
     &-content
       position relative
       margin-left 15px
+
+      &.active .navbar-option
+        font-weight bold !important
+        line-height 6.8 !important
 
   &-language
     &-separator
@@ -60,7 +68,8 @@
       font-size remify(11)
       line-height 72px
       letter-spacing 3.38px
-      cursor initial
+      cursor default
+
     &-container
       display flex
       flex-direction row
@@ -160,9 +169,14 @@
       letter-spacing 2.3px
       color #ffffff
       font-family "Futura"
+
       &-active
         font-weight bold
 
+      &-container
+        &.active .hamburger-text
+          font-weight bold !important
+          line-height 6.8 !important
 
     &-active,
     &-text:hover
