@@ -13,13 +13,16 @@ $(function(){
 		});
 		if (target_id === '#modal-ph-1') {
 			$('div[data-content="ph-1-indiana"]').addClass('ph-modal-item-active');
-			$('#ph-1-indiana').show()
+			$('#ph-1-indiana').show();
+			$("body").addClass("modal-open");
 		} else if (target_id === '#modal-ph-2') {
 			$('div[data-content="ph-2-tlacotalpan"]').addClass('ph-modal-item-active');
-			$('#ph-2-tlacotalpan').show()
+			$('#ph-2-tlacotalpan').show();
+			$("body").addClass("modal-open");
 		} else if (target_id === '#modal-ph-3') {
 			$('div[data-content="ph-3-comercio"]').addClass('ph-modal-item-active');
-			$('#ph-3-comercio').show()
+			$('#ph-3-comercio').show();
+			$("body").addClass("modal-open");
 		}
 	});
 
@@ -29,6 +32,7 @@ $(function(){
 		$modal_item.each(function (key, value) {
 			$(value).removeClass('ph-modal-item-active');
 		});
+		$("body").removeClass("modal-open");
 	});
 
 	$modal_item.click(function () {
