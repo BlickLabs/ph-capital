@@ -37,12 +37,12 @@
         <span class="navbar-language navbar-language-separator">/</span>
       </div>
       <div class="navbar-language-content">
-        <a href="#" class="navbar-option language-option" title="EN">
-          <strong>EN</strong>
+        <a href="{% if section == 'inicio' %} index.html {% endif %}" class="navbar-option language-option {% if lang_view == 'english' %}active{% endif %}" title="EN">
+          EN
         </a>
       </div>
       <div class="navbar-language-content">
-        <a href="#" class="navbar-option language-option" title="ES">
+        <a href="{% if section == 'index' %} inicio.html {% endif %}" class="navbar-option language-option {% if lang_view == 'spanish' %}active{% endif %}" title="ES">
           ES
         </a>
       </div>
@@ -50,13 +50,13 @@
   </div>
   <div data-attribute="" class="hamburger-visibility">
     <div class="hamburger-language-option">
-      <a href="#">
-        <span class="navbar-option"><strong>EN</strong></span>
+      <a href="{% if section == 'inicio' %} index.html {% endif %}">
+        <span class="navbar-option {% if lang_view == 'english' %}active{% endif %}">EN</span>
       </a>
     </div>
     <div class="hamburger-language-option">
-      <a href="#">
-        <span class="navbar-option">ES</span>
+      <a href="{% if section == 'index' %} inicio.html {% endif %}">
+        <span class="navbar-option {% if lang_view == 'spanish' %}active{% endif %}">ES</span>
       </a>
     </div>
     <div class="navbar-hamburguer" data-attribute="" id="hamburgerMenu">
@@ -68,7 +68,7 @@
     </div>
   </div>
   <div class="hamburger-menu-container" id="menuContainer">
-    <div class="hamburger-menu-body nunitosans-regular" data-attribute="">
+    <div class="hamburger-menu-body" data-attribute="">
       <div class="hamburger-text-container">
         <a class="go-section" href="#investment-strategy">
           <span class="hamburger-text">INVESTMENT STRATEGY</span>
