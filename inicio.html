@@ -413,13 +413,13 @@
     <h3 class="ph-title">
       CONTACTO
     </h3>
-    <form class="home-contact-form">
+    <form class="home-contact-form" id="contact-form-en" name="contact-form-en" method="post" enctype="multipart/form-data">
       <label for="name">Nombre</label>
-      <input type="text" name="name" id="name">
+      <input type="text" name="name" id="name" required>
       <label for="email">Correo electrónico</label>
-      <input type="email" name="email" id="email">
+      <input type="email" name="email" id="email" required>
       <label for="message">Mensaje</label>
-      <textarea name="message" id="message" cols="30" rows="10"></textarea>
+      <textarea name="message" id="message" cols="30" rows="10" required></textarea>
       <button>
         ENVIAR
       </button>
