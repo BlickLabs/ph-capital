@@ -8,16 +8,24 @@
     {% block extra_css %}{% endblock %}
     <link rel="stylesheet" href="css/{{ projectFilesName }}.libs.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>We invest in the heart of the cities | PH Capital</title>
+    <title>{% block title %}{% endblock %} | PH Capital</title>
     {% include 'seo/facebook.njk' %}
   </head>
   <body>
     <div id="page">
+      {% if lang_view == "english" %}
       {% include 'partials/navbar.njk' %}
+      {% else %}
+        {% include 'partials/navbar-es.njk' %}
+      {% endif %}
       <main>
         {% block content %}{% endblock %}
       </main>
-      {% include 'partials/footer.njk' %}
+      {% if lang_view == "english" %}
+        {% include 'partials/footer.njk' %}
+      {% else %}
+        {% include 'partials/footer-es.njk' %}
+      {% endif %}
     </div>
     {% block js_libs_config %}
     {% endblock %}
