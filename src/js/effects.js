@@ -20,8 +20,8 @@ $(function(){
 			$('#ph-2-tlacotalpan').show();
 			$("body").addClass("modal-open");
 		} else if (target_id === '#modal-ph-3') {
-			$('div[data-content="ph-3-comercio"]').addClass('ph-modal-item-active');
-			$('#ph-3-comercio').show();
+			$('div[data-content="ph-3-concepcion"]').addClass('ph-modal-item-active');
+			$('#ph-3-concepcion').show();
 			$("body").addClass("modal-open");
 		}
 	});
