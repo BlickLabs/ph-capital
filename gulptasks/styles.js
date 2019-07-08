@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-  paths = require('../gulpconfig').paths,
+  config = require('../gulpconfig'),
   stylus = require('gulp-stylus'),
   stylusIconFont = require('stylus-iconfont'),
   autoprefixer = require('autoprefixer-stylus'),
@@ -10,14 +10,15 @@ var gulp = require('gulp'),
   production = argv.production;
 
 gulp.task('build:styles', function () {
-  var fontFactory = new stylusIconFont({
-    glyphsDir: paths.getSrc('svg_dir'),
-    outputDir: paths.getCompiled(production, 'fonts'),
-    fontFacePath: '../fonts/',
-    watchMode: false
-  });
+  var baseDir = production ? config.paths.dist : config.paths.build,
+    fontFactory = new stylusIconFont({
+      glyphsDir: config.paths.src.svg_dir,
+      outputDir: baseDir.fonts,
+      fontFacePath: '../fonts/',
+      watchMode: false
+    });
 
-  return gulp.src(paths.getSrc('styles_main'))
+  return gulp.src(config.paths.src.styles_main)
     .pipe(stylus({
       use: [fontFactory.register, autoprefixer('last 2 versions')],
       define: {
@@ -25,7 +26,7 @@ gulp.task('build:styles', function () {
       }
     }))
     .pipe(gulpIf(production, cssmin({processImport: false})))
-    .pipe(gulp.dest(paths.getCompiled(production, 'css')))
+    .pipe(gulp.dest(baseDir.css))
     .on('end', function () {
       fontFactory.run();
     });

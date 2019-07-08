@@ -1,9 +1,10 @@
 var gulp = require('gulp'),
-  paths = require('../gulpconfig').paths,
+  config = require('../gulpconfig'),
   portfinder = require('portfinder'),
   connect = require('gulp-connect'),
   argv = require('yargs').argv,
-  production = argv.production;
+  production = argv.production,
+  filesDir = production ? config.paths.dist : config.paths.build;
 
 portfinder.basePort = 8080;
 
@@ -11,7 +12,7 @@ gulp.task('server:run', function() {
   portfinder.getPort(function (err, availablePort) {
     connect.server({
       port: availablePort,
-      root: paths.getCompiled(production, 'root'),
+      root: filesDir.root,
       livereload: true
     });
   });
@@ -19,12 +20,12 @@ gulp.task('server:run', function() {
 
 gulp.task('server:reload', function () {
   var src = [
-    paths.getCompiled(production, 'html'),
-    paths.getCompiled(production, 'js'),
-    paths.getCompiled(production, 'css'),
-    paths.getCompiled(production, 'fonts'),
-    paths.getCompiled(production, 'img')
-  ];
+    filesDir.html,
+    filesDir.js,
+    filesDir.css,
+    filesDir.fonts,
+    filesDir.img
+  ]
   gulp.src(src)
     .pipe(connect.reload());
 });
