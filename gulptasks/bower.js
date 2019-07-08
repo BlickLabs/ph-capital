@@ -10,7 +10,8 @@ var gulp = require('gulp'),
   production = argv.production;
 
 gulp.task('build:bower', function () {
-  var fontExtensions = [
+  var baseDir = production ? config.paths.dist : config.paths.build,
+    fontExtensions = [
       '**/*.eot',
       '**/*.svg',
       '**/*.ttf',
@@ -20,15 +21,15 @@ gulp.task('build:bower', function () {
     ];
 
   gulp.src(bowerFiles('**/*.css'))
-    .pipe(cssconcat(config.outputs.getLibs('css'), {rebaseUrls: false}))
+    .pipe(cssconcat(config.outputs.libs('css'), {rebaseUrls: false}))
     .pipe(gulpIf(production, cssmin({processImport: false})))
-    .pipe(gulp.dest(config.paths.getCompiled(production, 'css')));
+    .pipe(gulp.dest(baseDir.css));
 
   gulp.src(bowerFiles('**/*.js'))
-    .pipe(jsconcat(config.outputs.getLibs('js')))
+    .pipe(jsconcat(config.outputs.libs('js')))
     .pipe(gulpIf(production, uglify()))
-    .pipe(gulp.dest(config.paths.getCompiled(production, 'js')));
+    .pipe(gulp.dest(baseDir.js));
 
   gulp.src(bowerFiles(fontExtensions))
-    .pipe(gulp.dest(config.paths.getCompiled(production, 'fonts')));
+    .pipe(gulp.dest(baseDir.fonts));
 });

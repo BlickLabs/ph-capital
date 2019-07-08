@@ -6,20 +6,17 @@ var gulp = require('gulp'),
   production = argv.production;
 
 gulp.task('build:html', function () {
-  return gulp.src(config.paths.getSrc('templates_sections'))
+  var baseDir = production ? config.paths.dist : config.paths.build;
+
+  return gulp.src(config.paths.src.templates_sections)
     .pipe(data(function (file) {
       var sectionName = file.relative.split('.njk')[0];
       return {
         section: sectionName
-      };
+      }
     }))
-
-    .pipe(data(function() {
-      return require('../src/json/data.json')
-    }))
-
     .pipe(nunjucksRender({
-      path: config.paths.getSrc('templates_dir'),
+      path: config.paths.src.templates_dir,
       ext: '.html',
       inheritExtension: false,
       manageEnv: function (environment) {
@@ -27,5 +24,5 @@ gulp.task('build:html', function () {
         environment.addGlobal('projectFilesName', config.etc.formattedName);
       }
     }))
-    .pipe(gulp.dest(config.paths.getCompiled(production, 'root')));
+    .pipe(gulp.dest(baseDir.root));
 });

@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-  paths = require('./gulpconfig').paths,
+  config = require('./gulpconfig'),
   requireDir = require('require-dir'),
   argv = require('yargs').argv,
   production = argv.production,
@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     'copy:fonts',
     'copy:images',
     'build:html',
+    'copy:nginx'
   ],
   defaultTasks = [
     'build'
@@ -26,13 +27,12 @@ if (production) {
 gulp.task('build', buildTasks);
 
 gulp.task('watch', function () {
-  gulp.watch(paths.getBower(''), ['build:bower', 'server:reload']);
-  gulp.watch([paths.getSrc('styles_all'), paths.getSrc('svg_files')], ['build:styles', 'server:reload']);
-  gulp.watch(paths.getSrc('scripts_all'), ['build:scripts', 'server:reload']);
-  gulp.watch(paths.getSrc('jsons_all'), ['build:scripts', 'server:reload']);
-  gulp.watch(paths.getSrc('fonts'), ['copy:fonts', 'server:reload']);
-  gulp.watch(paths.getSrc('img'), ['copy:images', 'server:reload']);
-  gulp.watch(paths.getSrc('templates_all'), ['build:html', 'server:reload']);
+  gulp.watch(config.paths.bower(''), ['build:bower', 'server:reload']);
+  gulp.watch([config.paths.src.styles_all, config.paths.src.svg_files], ['build:styles', 'server:reload']);
+  gulp.watch(config.paths.src.scripts_all, ['build:scripts', 'server:reload']);
+  gulp.watch(config.paths.src.fonts, ['copy:fonts', 'server:reload']);
+  gulp.watch(config.paths.src.img, ['copy:images', 'server:reload']);
+  gulp.watch(config.paths.src.templates_all, ['build:html', 'server:reload']);
 });
 
 gulp.task('serve', ['server:run', 'server:reload']);
